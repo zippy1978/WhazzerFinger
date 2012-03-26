@@ -14,6 +14,7 @@
 		57041B0B14D0A36800478CB6 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57041B0A14D0A36800478CB6 /* QTKit.framework */; };
 		573E12FC14D6B54100B491D0 /* iPhoneLandscapeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 573E12FB14D6B54100B491D0 /* iPhoneLandscapeBackground.png */; };
 		573E12FF14D6B8E900B491D0 /* iPhone4LandscapeBlackHardware.png in Resources */ = {isa = PBXBuildFile; fileRef = 573E12FE14D6B8E900B491D0 /* iPhone4LandscapeBlackHardware.png */; };
+		574F5ADD152103F400C647F0 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 574F5ADC152103F400C647F0 /* Icon.icns */; };
 		575D2E2914D603B40063D133 /* DefaultActivePointer.png in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E2714D603B40063D133 /* DefaultActivePointer.png */; };
 		575D2E2A14D603B40063D133 /* DefaultHoverPointer.png in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E2814D603B40063D133 /* DefaultHoverPointer.png */; };
 		575D2E4414D605470063D133 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3014D605470063D133 /* AppDelegate.m */; };
@@ -27,7 +28,6 @@
 		575D2E4F14D605580063D133 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E4D14D605580063D133 /* MainMenu.xib */; };
 		575D2E5214D60EEE0063D133 /* StatusItemIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E5114D60EEE0063D133 /* StatusItemIcon.png */; };
 		575D2E5414D610F20063D133 /* StatusItemAlternateIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E5314D610F20063D133 /* StatusItemAlternateIcon.png */; };
-		5781B5981517D2F000622982 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5781B5971517D2F000622982 /* Icon.png */; };
 		5781B59C1517D5E000622982 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5781B59A1517D5E000622982 /* Localizable.strings */; };
 		5781B59F1517E1DC00622982 /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5781B59E1517E1DC00622982 /* AboutWindow.xib */; };
 		5781B5A11517E23C00622982 /* AboutLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5781B5A01517E23C00622982 /* AboutLogo.png */; };
@@ -61,6 +61,7 @@
 		57041B0A14D0A36800478CB6 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		573E12FB14D6B54100B491D0 /* iPhoneLandscapeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhoneLandscapeBackground.png; sourceTree = "<group>"; };
 		573E12FE14D6B8E900B491D0 /* iPhone4LandscapeBlackHardware.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone4LandscapeBlackHardware.png; sourceTree = "<group>"; };
+		574F5ADC152103F400C647F0 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		575D2E2714D603B40063D133 /* DefaultActivePointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultActivePointer.png; sourceTree = "<group>"; };
 		575D2E2814D603B40063D133 /* DefaultHoverPointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultHoverPointer.png; sourceTree = "<group>"; };
 		575D2E2F14D605470063D133 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		575D2E5014D606980063D133 /* Pointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pointer.h; sourceTree = "<group>"; };
 		575D2E5114D60EEE0063D133 /* StatusItemIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusItemIcon.png; sourceTree = "<group>"; };
 		575D2E5314D610F20063D133 /* StatusItemAlternateIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusItemAlternateIcon.png; sourceTree = "<group>"; };
-		5781B5971517D2F000622982 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		5781B59B1517D5E000622982 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5781B59D1517D99500622982 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5781B59E1517E1DC00622982 /* AboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindow.xib; sourceTree = "<group>"; };
@@ -291,7 +291,7 @@
 		578A7E2714CD7A950069B34F = {
 			isa = PBXGroup;
 			children = (
-				5781B5971517D2F000622982 /* Icon.png */,
+				574F5ADC152103F400C647F0 /* Icon.icns */,
 				578A7E3C14CD7A950069B34F /* WhazzerFinger */,
 				578A7E5914CD7A960069B34F /* WhazzerFingerTests */,
 				578A7E3514CD7A950069B34F /* Frameworks */,
@@ -465,10 +465,10 @@
 				575D2E5414D610F20063D133 /* StatusItemAlternateIcon.png in Resources */,
 				573E12FC14D6B54100B491D0 /* iPhoneLandscapeBackground.png in Resources */,
 				573E12FF14D6B8E900B491D0 /* iPhone4LandscapeBlackHardware.png in Resources */,
-				5781B5981517D2F000622982 /* Icon.png in Resources */,
 				5781B59C1517D5E000622982 /* Localizable.strings in Resources */,
 				5781B59F1517E1DC00622982 /* AboutWindow.xib in Resources */,
 				5781B5A11517E23C00622982 /* AboutLogo.png in Resources */,
+				574F5ADD152103F400C647F0 /* Icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
