@@ -10,6 +10,7 @@
 #import "Pointer.h"
 #import "ScreenRecorder.h"
 #import "EncodeWindowController.h"
+#import "AboutWindowController.h"
 
 #define kiPhoneWidth 368
 #define kiPhoneHeight 716
@@ -39,6 +40,7 @@ void windowFrameDidChangeCallback( AXObserverRef observer, AXUIElementRef elemen
 	NSWindow *_fadeOverlayWindow;
     
     EncodeWindowController *_encodeWindowController;
+    AboutWindowController *_aboutWindowController;
     
     id<Pointer> _pointer;
     
@@ -48,6 +50,7 @@ void windowFrameDidChangeCallback( AXObserverRef observer, AXUIElementRef elemen
 @property (strong, nonatomic) IBOutlet NSMenu *statusMenu;
 @property (strong, nonatomic) IBOutlet NSMenuItem *screenShotMenuItem;
 @property (strong, nonatomic) IBOutlet NSMenuItem *recordMenuItem;
+@property (strong, nonatomic) IBOutlet NSMenuItem *aboutMenuItem;
 @property (strong, nonatomic) IBOutlet NSMenuItem *quitMenuItem;
 
 - (void)hardwareOverlayImage:(NSImage *)image;
@@ -64,5 +67,6 @@ void windowFrameDidChangeCallback( AXObserverRef observer, AXUIElementRef elemen
 - (IBAction)quit:(id)sender;
 - (IBAction)screenShot:(id)sender;
 - (IBAction)record:(id)sender;
+- (IBAction)about:(id)sender;
 
 @end

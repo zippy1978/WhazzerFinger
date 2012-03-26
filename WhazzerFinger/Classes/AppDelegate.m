@@ -15,6 +15,7 @@
 @synthesize statusMenu = _statusMenu;
 @synthesize screenShotMenuItem = _screenShotMenuItem;
 @synthesize recordMenuItem = _recordMenuItem;
+@synthesize aboutMenuItem = _aboutMenuItem;
 @synthesize quitMenuItem = _quitMenuItem;
 
 #pragma mark - Application delegate methods
@@ -24,6 +25,7 @@
     // i18n
     [_screenShotMenuItem setTitle:NSLocalizedString(@"Screenshot", @"Screenshot menu item title")];
     [_recordMenuItem setTitle:NSLocalizedString(@"Record", @"Record menu item title")];
+    [_aboutMenuItem setTitle:NSLocalizedString(@"About", @"About menu item title")];
     [_quitMenuItem setTitle:NSLocalizedString(@"Quit", @"Quit menu item title")];
     
     // Initialize pointer overlay
@@ -47,6 +49,8 @@
     // Initialize encode window
     _encodeWindowController = [[EncodeWindowController alloc] initWithWindowNibName:@"EncodeWindow"];
 
+    // Initialize about window
+    _aboutWindowController = [[AboutWindowController alloc] initWithWindowNibName:@"AboutWindow"];
     
     // Event run loop
     CGEventMask mask =	CGEventMaskBit(kCGEventLeftMouseDown) | 
@@ -140,7 +144,7 @@
 		for(NSRunningApplication *application in applications)
 		{
             // TODO : internationalize Simulator name here !
-			if([application.localizedName isEqualToString:@"Simulateur iOS"])
+			if([application.localizedName isEqualToString:NSLocalizedString(@"iOS Simulator", @"iOS Simulator application name")])
 			{
 				pid_t pid = application.processIdentifier;
 				
@@ -156,11 +160,12 @@
         
 	} else {
         
-		NSRunAlertPanel(@"Universal Access Disabled", @"You must enable access for assistive devices in the System Preferences, under Universal Access.", @"OK", nil, nil, nil);
+		NSRunAlertPanel(NSLocalizedString(@"Universal Access Disabled", @"Universal Access alert title"), 
+                        NSLocalizedString(@"You must enable access for assistive devices in the System Preferences, under Universal Access.", @"Universal Access disabled message"), @"OK", nil, nil, nil);
         
 	}
 	
-    NSRunAlertPanel(@"Couldn't find Simulator", @"Couldn't find iOS Simulator.", @"OK", nil, nil, nil);
+    NSRunAlertPanel(NSLocalizedString(@"Couldn't find Simulator", @"Simulator not found alert title"), NSLocalizedString(@"Couldn't find iOS Simulator.", @"Simulator not found message"), @"OK", nil, nil, nil);
 	
     return NULL;
 }
@@ -441,6 +446,16 @@
     [_screenRecorder stop];
     
     exit(0);
+}
+
+- (IBAction)about:(id)sender
+{
+    // Show about window
+    NSWindow *aboutWindow = _aboutWindowController.window;
+    [NSApp runModalForWindow: aboutWindow];
+    [NSApp endSheet: aboutWindow];
+    [aboutWindow orderOut: self];
+    
 }
 
 - (IBAction)screenShot:(id)sender
