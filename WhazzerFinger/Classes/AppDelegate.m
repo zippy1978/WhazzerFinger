@@ -38,9 +38,6 @@
 	[_pointerOverlayWindow setIgnoresMouseEvents:YES];
     
 	[self updateWindowPosition];
-	
-    [_pointerOverlayWindow orderFront:nil];
-    
     
     // Initialize screen recorder
     _screenRecorder = [[ScreenRecorder alloc] init];
@@ -81,6 +78,9 @@
     
     // Hide cursor
     [self hideCursor];
+    
+    // Hide scene
+    [self hideScene];
 
 }
 
@@ -96,7 +96,6 @@
 	[_backgroundWindow setBackgroundColor:[NSColor colorWithPatternImage:image]];
 	[_backgroundWindow setIgnoresMouseEvents:YES];
 	[_backgroundWindow setLevel:NSFloatingWindowLevel - 1];
-	[_backgroundWindow orderBack:_hardwareOverlayWindow];
     [_backgroundWindow setContentSize:NSMakeSize(image.size.width, image.size.height)];
     
     // Center on screen
@@ -118,7 +117,6 @@
 	[_hardwareOverlayWindow setBackgroundColor:[NSColor colorWithPatternImage:image]];
 	[_hardwareOverlayWindow setIgnoresMouseEvents:YES];
 	[_hardwareOverlayWindow setLevel:NSFloatingWindowLevel - 1];
-	[_hardwareOverlayWindow orderFront:nil];
     [_hardwareOverlayWindow setContentSize:NSMakeSize(image.size.width, image.size.height)];
 	
 	_screenRect = [[_hardwareOverlayWindow screen] frame];
@@ -289,7 +287,7 @@
 
 - (void)registerForSimulatorWindowResizedNotification
 {
-	// This methode is leaking ...
+	// This method is leaking ...
 	
 	AXUIElementRef simulatorApp = [self simulatorApplication];
 	if (!simulatorApp) return;
@@ -326,31 +324,51 @@
 
     CFStringRef propertyString = CFStringCreateWithCString(NULL, "SetsCursorInBackground", kCFStringEncodingUTF8);
     
-    if (NSPointInRect (mousePosition, _backgroundWindow.frame)) 
-    {
-        [_pointerOverlayWindow orderFront:nil];
+    // Cursor is never hidden if scene is not visible
+    if ([_backgroundWindow isVisible]) {
+
+        if (NSPointInRect (mousePosition, _backgroundWindow.frame)) 
+        {
+            [_pointerOverlayWindow orderFront:nil];
+                
+            // Hack to make background cursor setting work
+            CGSSetConnectionProperty(_CGSDefaultConnection(), _CGSDefaultConnection(), propertyString, kCFBooleanTrue);
+            // Hide the cursor and wait
+            CGDisplayHideCursor(kCGDirectMainDisplay);
             
-        // Hack to make background cursor setting work
-        CGSSetConnectionProperty(_CGSDefaultConnection(), _CGSDefaultConnection(), propertyString, kCFBooleanTrue);
-        // Hide the cursor and wait
-        CGDisplayHideCursor(kCGDirectMainDisplay);
-        
+                
+        } else {
             
-    } else {
-        
-        // Show cursor
-        CGSSetConnectionProperty(_CGSDefaultConnection(), _CGSDefaultConnection(), propertyString, kCFBooleanTrue);
-        CGDisplayShowCursor(kCGDirectMainDisplay);
-        CGAssociateMouseAndMouseCursorPosition (true);
-        CGDisplayShowCursor(kCGNullDirectDisplay);
-        
-        [_pointerOverlayWindow orderOut:nil];  
-        
-        
-        
+            // Show cursor
+            CGSSetConnectionProperty(_CGSDefaultConnection(), _CGSDefaultConnection(), propertyString, kCFBooleanTrue);
+            CGDisplayShowCursor(kCGDirectMainDisplay);
+            CGAssociateMouseAndMouseCursorPosition (true);
+            CGDisplayShowCursor(kCGNullDirectDisplay);
+            
+            [_pointerOverlayWindow orderOut:nil];  
+            
+        }
+            
     }
     
     CFRelease(propertyString);
+    
+}
+
+- (void)hideScene
+{
+    [_backgroundWindow orderOut:nil];
+    [_hardwareOverlayWindow orderOut:nil];
+    [_pointerOverlayWindow orderOut:nil];
+}
+
+- (void)showScene
+{
+    [self positionSimulatorWindow:nil];
+    
+    [_hardwareOverlayWindow orderFront:nil];
+    [_backgroundWindow orderBack:_hardwareOverlayWindow];
+    [_pointerOverlayWindow orderFront:nil];
     
 }
 
@@ -417,6 +435,9 @@
 
 - (void)recordingDidStop:(ScreenRecorder *)screenRecorder
 {
+    
+    [self hideScene];
+    
     [_statusItem setTitle:nil];
     
     [_recordMenuItem setTitle:NSLocalizedString(@"Record", @"Record menu item title")];
@@ -450,6 +471,7 @@
 
 - (IBAction)about:(id)sender
 {
+    
     // Show about window
     NSWindow *aboutWindow = _aboutWindowController.window;
     [NSApp runModalForWindow: aboutWindow];
@@ -460,6 +482,10 @@
 
 - (IBAction)screenShot:(id)sender
 {
+    [self showScene];
+    
+    // Just to make sure scene is ready
+    [NSThread sleepForTimeInterval:1];
     
     // Desktop path
     NSString *desktopPath = [[NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, NO) objectAtIndex:0] stringByExpandingTildeInPath];
@@ -474,10 +500,13 @@
     
     // Shot
     [_screenRecorder takeScreenShotAndWriteToFile:[NSString stringWithFormat:@"%@/screenshot-%@.png", desktopPath, timestamp]];
+    
+    [self hideScene];
 }
 
 - (IBAction)record:(id)sender
 {
+    [self showScene];
     
     // Start
     if (!_screenRecorder.recording) {

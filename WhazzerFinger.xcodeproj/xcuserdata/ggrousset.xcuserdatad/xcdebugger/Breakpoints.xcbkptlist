@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "WhazzerFinger/Classes/AppDelegate.m"
-         timestampString = "353887526.882907"
+         timestampString = "354487034.084906"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "147"
-         endingLineNumber = "147"
+         startingLineNumber = "145"
+         endingLineNumber = "145"
          landmarkName = "-simulatorApplication"
          landmarkType = "5">
       </FileBreakpoint>

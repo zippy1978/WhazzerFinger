@@ -63,6 +63,8 @@ void windowFrameDidChangeCallback( AXObserverRef observer, AXUIElementRef elemen
 - (void)updateWindowPosition;
 - (void)registerForSimulatorWindowResizedNotification;
 - (void)hideCursor;
+- (void)hideScene;
+- (void)showScene;
 
 - (IBAction)quit:(id)sender;
 - (IBAction)screenShot:(id)sender;
