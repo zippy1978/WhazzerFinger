@@ -1,6 +1,8 @@
 
 WhazzerFinger allows screen captures and video recording of the iOS Simulator.
 
+Check out a video made with WhazzerFinger / iMovie here: http://youtu.be/Z3W-qU5EP4A.
+
 # Overlays
 
 The application adds an overlay on top of the actual simulator window to give it a more realistic look.
