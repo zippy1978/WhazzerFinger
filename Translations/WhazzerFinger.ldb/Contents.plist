@@ -167,6 +167,8 @@
 							<string>iOS Simulator</string>
 							<key>localizations</key>
 							<dict>
+								<key>de</key>
+								<string>iOS-Simulator</string>
 								<key>en</key>
 								<string>iOS Simulator</string>
 								<key>fr</key>
@@ -453,7 +455,7 @@
 				</dict>
 			</array>
 			<key>flags</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>name</key>
 			<string>../WhazzerFingerTests</string>
 			<key>naming style</key>
@@ -468,6 +470,7 @@
 	<array>
 		<string>en</string>
 		<string>fr</string>
+		<string>de</string>
 	</array>
 	<key>preferences</key>
 	<dict>
@@ -489,6 +492,8 @@
 		<false/>
 		<key>deactivateEmptyStrings</key>
 		<true/>
+		<key>deactivatePlaceholderStrings</key>
+		<true/>
 		<key>defaultBundleNaming</key>
 		<integer>1</integer>
 		<key>defaultBundleReferencing</key>
@@ -503,6 +508,8 @@
 		<true/>
 		<key>markAutotranslatedAsNotChanged</key>
 		<true/>
+		<key>rescanXcodeProjects</key>
+		<false/>
 		<key>saveCompressed</key>
 		<false/>
 		<key>updateXcodeProjects</key>

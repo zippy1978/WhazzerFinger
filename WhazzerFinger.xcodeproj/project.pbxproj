@@ -12,26 +12,27 @@
 		57041B0114CECF8C00478CB6 /* SimFingerActivePointer.png in Resources */ = {isa = PBXBuildFile; fileRef = 57041AFF14CECF8C00478CB6 /* SimFingerActivePointer.png */; };
 		57041B0214CECF8C00478CB6 /* SimFingerHoverPointer.png in Resources */ = {isa = PBXBuildFile; fileRef = 57041B0014CECF8C00478CB6 /* SimFingerHoverPointer.png */; };
 		57041B0B14D0A36800478CB6 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57041B0A14D0A36800478CB6 /* QTKit.framework */; };
+		570BA7EA16F6728600E74DBF /* WhazzerFinger-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 578A7E3E14CD7A950069B34F /* WhazzerFinger-Info.plist */; };
 		573E12FC14D6B54100B491D0 /* iPhoneLandscapeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 573E12FB14D6B54100B491D0 /* iPhoneLandscapeBackground.png */; };
 		573E12FF14D6B8E900B491D0 /* iPhone4LandscapeBlackHardware.png in Resources */ = {isa = PBXBuildFile; fileRef = 573E12FE14D6B8E900B491D0 /* iPhone4LandscapeBlackHardware.png */; };
 		574F5ADD152103F400C647F0 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 574F5ADC152103F400C647F0 /* Icon.icns */; };
 		575D2E2914D603B40063D133 /* DefaultActivePointer.png in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E2714D603B40063D133 /* DefaultActivePointer.png */; };
 		575D2E2A14D603B40063D133 /* DefaultHoverPointer.png in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E2814D603B40063D133 /* DefaultHoverPointer.png */; };
-		575D2E4414D605470063D133 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3014D605470063D133 /* AppDelegate.m */; };
+		575D2E4414D605470063D133 /* WFIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3014D605470063D133 /* WFIAppDelegate.m */; };
 		575D2E4514D605470063D133 /* DDInvocationGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3414D605470063D133 /* DDInvocationGrabber.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
 		575D2E4614D605470063D133 /* NSObject+DDExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3614D605470063D133 /* NSObject+DDExtensions.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
-		575D2E4714D605470063D133 /* EncodeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3A14D605470063D133 /* EncodeWindowController.m */; };
-		575D2E4814D605470063D133 /* DefaultPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3D14D605470063D133 /* DefaultPointer.m */; };
-		575D2E4914D605470063D133 /* SimFingerPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3F14D605470063D133 /* SimFingerPointer.m */; };
-		575D2E4A14D605470063D133 /* ScreenRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E4314D605470063D133 /* ScreenRecorder.m */; };
-		575D2E4E14D605580063D133 /* EncodeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E4C14D605580063D133 /* EncodeWindow.xib */; };
-		575D2E4F14D605580063D133 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E4D14D605580063D133 /* MainMenu.xib */; };
+		575D2E4714D605470063D133 /* WFIEncodeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3A14D605470063D133 /* WFIEncodeWindowController.m */; };
+		575D2E4814D605470063D133 /* WFIDefaultPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3D14D605470063D133 /* WFIDefaultPointer.m */; };
+		575D2E4914D605470063D133 /* WFISimFingerPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3F14D605470063D133 /* WFISimFingerPointer.m */; };
+		575D2E4A14D605470063D133 /* WFIScreenRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E4314D605470063D133 /* WFIScreenRecorder.m */; };
+		575D2E4E14D605580063D133 /* WFIEncodeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E4C14D605580063D133 /* WFIEncodeWindow.xib */; };
+		575D2E4F14D605580063D133 /* WFIMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E4D14D605580063D133 /* WFIMainMenu.xib */; };
 		575D2E5214D60EEE0063D133 /* StatusItemIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E5114D60EEE0063D133 /* StatusItemIcon.png */; };
 		575D2E5414D610F20063D133 /* StatusItemAlternateIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E5314D610F20063D133 /* StatusItemAlternateIcon.png */; };
 		5781B59C1517D5E000622982 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5781B59A1517D5E000622982 /* Localizable.strings */; };
-		5781B59F1517E1DC00622982 /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5781B59E1517E1DC00622982 /* AboutWindow.xib */; };
+		5781B59F1517E1DC00622982 /* WFIAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5781B59E1517E1DC00622982 /* WFIAboutWindow.xib */; };
 		5781B5A11517E23C00622982 /* AboutLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5781B5A01517E23C00622982 /* AboutLogo.png */; };
-		5781B5A41517E47C00622982 /* AboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5781B5A31517E47C00622982 /* AboutWindowController.m */; };
+		5781B5A41517E47C00622982 /* WFIAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5781B5A31517E47C00622982 /* WFIAboutWindowController.m */; };
 		578A7E3714CD7A950069B34F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578A7E3614CD7A950069B34F /* Cocoa.framework */; };
 		578A7E4114CD7A950069B34F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 578A7E3F14CD7A950069B34F /* InfoPlist.strings */; };
 		578A7E4314CD7A950069B34F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 578A7E4214CD7A950069B34F /* main.m */; };
@@ -59,45 +60,48 @@
 		57041AFF14CECF8C00478CB6 /* SimFingerActivePointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SimFingerActivePointer.png; sourceTree = "<group>"; };
 		57041B0014CECF8C00478CB6 /* SimFingerHoverPointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SimFingerHoverPointer.png; sourceTree = "<group>"; };
 		57041B0A14D0A36800478CB6 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
+		570BA7E916F6728600E74DBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		570BA7EB16F672BB00E74DBF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		570BA7EC16F672BB00E74DBF /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		573E12FB14D6B54100B491D0 /* iPhoneLandscapeBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhoneLandscapeBackground.png; sourceTree = "<group>"; };
 		573E12FE14D6B8E900B491D0 /* iPhone4LandscapeBlackHardware.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone4LandscapeBlackHardware.png; sourceTree = "<group>"; };
 		574F5ADC152103F400C647F0 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		575D2E2714D603B40063D133 /* DefaultActivePointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultActivePointer.png; sourceTree = "<group>"; };
 		575D2E2814D603B40063D133 /* DefaultHoverPointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultHoverPointer.png; sourceTree = "<group>"; };
-		575D2E2F14D605470063D133 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		575D2E3014D605470063D133 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		575D2E2F14D605470063D133 /* WFIAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFIAppDelegate.h; sourceTree = "<group>"; };
+		575D2E3014D605470063D133 /* WFIAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFIAppDelegate.m; sourceTree = "<group>"; };
 		575D2E3314D605470063D133 /* DDInvocationGrabber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDInvocationGrabber.h; sourceTree = "<group>"; };
 		575D2E3414D605470063D133 /* DDInvocationGrabber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDInvocationGrabber.m; sourceTree = "<group>"; };
 		575D2E3514D605470063D133 /* NSObject+DDExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DDExtensions.h"; sourceTree = "<group>"; };
 		575D2E3614D605470063D133 /* NSObject+DDExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DDExtensions.m"; sourceTree = "<group>"; };
-		575D2E3914D605470063D133 /* EncodeWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncodeWindowController.h; sourceTree = "<group>"; };
-		575D2E3A14D605470063D133 /* EncodeWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncodeWindowController.m; sourceTree = "<group>"; };
-		575D2E3C14D605470063D133 /* DefaultPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultPointer.h; sourceTree = "<group>"; };
-		575D2E3D14D605470063D133 /* DefaultPointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultPointer.m; sourceTree = "<group>"; };
-		575D2E3E14D605470063D133 /* SimFingerPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimFingerPointer.h; sourceTree = "<group>"; };
-		575D2E3F14D605470063D133 /* SimFingerPointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimFingerPointer.m; sourceTree = "<group>"; };
-		575D2E4214D605470063D133 /* ScreenRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenRecorder.h; sourceTree = "<group>"; };
-		575D2E4314D605470063D133 /* ScreenRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenRecorder.m; sourceTree = "<group>"; };
-		575D2E4C14D605580063D133 /* EncodeWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EncodeWindow.xib; sourceTree = "<group>"; };
-		575D2E4D14D605580063D133 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		575D2E5014D606980063D133 /* Pointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pointer.h; sourceTree = "<group>"; };
+		575D2E3914D605470063D133 /* WFIEncodeWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFIEncodeWindowController.h; sourceTree = "<group>"; };
+		575D2E3A14D605470063D133 /* WFIEncodeWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFIEncodeWindowController.m; sourceTree = "<group>"; };
+		575D2E3C14D605470063D133 /* WFIDefaultPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFIDefaultPointer.h; sourceTree = "<group>"; };
+		575D2E3D14D605470063D133 /* WFIDefaultPointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFIDefaultPointer.m; sourceTree = "<group>"; };
+		575D2E3E14D605470063D133 /* WFISimFingerPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFISimFingerPointer.h; sourceTree = "<group>"; };
+		575D2E3F14D605470063D133 /* WFISimFingerPointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFISimFingerPointer.m; sourceTree = "<group>"; };
+		575D2E4214D605470063D133 /* WFIScreenRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFIScreenRecorder.h; sourceTree = "<group>"; };
+		575D2E4314D605470063D133 /* WFIScreenRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFIScreenRecorder.m; sourceTree = "<group>"; };
+		575D2E4C14D605580063D133 /* WFIEncodeWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFIEncodeWindow.xib; sourceTree = "<group>"; };
+		575D2E4D14D605580063D133 /* WFIMainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFIMainMenu.xib; sourceTree = "<group>"; };
+		575D2E5014D606980063D133 /* WFIPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFIPointer.h; sourceTree = "<group>"; };
 		575D2E5114D60EEE0063D133 /* StatusItemIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusItemIcon.png; sourceTree = "<group>"; };
 		575D2E5314D610F20063D133 /* StatusItemAlternateIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusItemAlternateIcon.png; sourceTree = "<group>"; };
 		5781B59B1517D5E000622982 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5781B59D1517D99500622982 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5781B59E1517E1DC00622982 /* AboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindow.xib; sourceTree = "<group>"; };
+		5781B59E1517E1DC00622982 /* WFIAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFIAboutWindow.xib; sourceTree = "<group>"; };
 		5781B5A01517E23C00622982 /* AboutLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutLogo.png; sourceTree = "<group>"; };
-		5781B5A21517E47C00622982 /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWindowController.h; sourceTree = "<group>"; };
-		5781B5A31517E47C00622982 /* AboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWindowController.m; sourceTree = "<group>"; };
+		5781B5A21517E47C00622982 /* WFIAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFIAboutWindowController.h; sourceTree = "<group>"; };
+		5781B5A31517E47C00622982 /* WFIAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFIAboutWindowController.m; sourceTree = "<group>"; };
 		578A7E3214CD7A950069B34F /* WhazzerFinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhazzerFinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		578A7E3614CD7A950069B34F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		578A7E3914CD7A950069B34F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		578A7E3A14CD7A950069B34F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		578A7E3B14CD7A950069B34F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		578A7E3E14CD7A950069B34F /* WhazzerFinger-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhazzerFinger-Info.plist"; sourceTree = "<group>"; };
+		578A7E3E14CD7A950069B34F /* WhazzerFinger-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "WhazzerFinger-Info.plist"; sourceTree = "<group>"; };
 		578A7E4014CD7A950069B34F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		578A7E4214CD7A950069B34F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		578A7E4414CD7A950069B34F /* WhazzerFinger-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhazzerFinger-Prefix.pch"; sourceTree = "<group>"; };
+		578A7E4214CD7A950069B34F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		578A7E4414CD7A950069B34F /* WhazzerFinger-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WhazzerFinger-Prefix.pch"; sourceTree = "<group>"; };
 		578A7E5314CD7A960069B34F /* WhazzerFingerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhazzerFingerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		578A7E5414CD7A960069B34F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		578A7E5B14CD7A960069B34F /* WhazzerFingerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhazzerFingerTests-Info.plist"; sourceTree = "<group>"; };
@@ -209,8 +213,8 @@
 		575D2E2E14D605470063D133 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				575D2E2F14D605470063D133 /* AppDelegate.h */,
-				575D2E3014D605470063D133 /* AppDelegate.m */,
+				575D2E2F14D605470063D133 /* WFIAppDelegate.h */,
+				575D2E3014D605470063D133 /* WFIAppDelegate.m */,
 				575D2E3114D605470063D133 /* Ext */,
 				575D2E3714D605470063D133 /* GUI */,
 				575D2E4114D605470063D133 /* ScreenRecorder */,
@@ -249,10 +253,10 @@
 		575D2E3814D605470063D133 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				575D2E3914D605470063D133 /* EncodeWindowController.h */,
-				575D2E3A14D605470063D133 /* EncodeWindowController.m */,
-				5781B5A21517E47C00622982 /* AboutWindowController.h */,
-				5781B5A31517E47C00622982 /* AboutWindowController.m */,
+				575D2E3914D605470063D133 /* WFIEncodeWindowController.h */,
+				575D2E3A14D605470063D133 /* WFIEncodeWindowController.m */,
+				5781B5A21517E47C00622982 /* WFIAboutWindowController.h */,
+				5781B5A31517E47C00622982 /* WFIAboutWindowController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -260,11 +264,11 @@
 		575D2E3B14D605470063D133 /* Pointers */ = {
 			isa = PBXGroup;
 			children = (
-				575D2E5014D606980063D133 /* Pointer.h */,
-				575D2E3C14D605470063D133 /* DefaultPointer.h */,
-				575D2E3D14D605470063D133 /* DefaultPointer.m */,
-				575D2E3E14D605470063D133 /* SimFingerPointer.h */,
-				575D2E3F14D605470063D133 /* SimFingerPointer.m */,
+				575D2E5014D606980063D133 /* WFIPointer.h */,
+				575D2E3C14D605470063D133 /* WFIDefaultPointer.h */,
+				575D2E3D14D605470063D133 /* WFIDefaultPointer.m */,
+				575D2E3E14D605470063D133 /* WFISimFingerPointer.h */,
+				575D2E3F14D605470063D133 /* WFISimFingerPointer.m */,
 			);
 			path = Pointers;
 			sourceTree = "<group>";
@@ -272,8 +276,8 @@
 		575D2E4114D605470063D133 /* ScreenRecorder */ = {
 			isa = PBXGroup;
 			children = (
-				575D2E4214D605470063D133 /* ScreenRecorder.h */,
-				575D2E4314D605470063D133 /* ScreenRecorder.m */,
+				575D2E4214D605470063D133 /* WFIScreenRecorder.h */,
+				575D2E4314D605470063D133 /* WFIScreenRecorder.m */,
 			);
 			path = ScreenRecorder;
 			sourceTree = "<group>";
@@ -281,9 +285,9 @@
 		575D2E4B14D605580063D133 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				575D2E4C14D605580063D133 /* EncodeWindow.xib */,
-				575D2E4D14D605580063D133 /* MainMenu.xib */,
-				5781B59E1517E1DC00622982 /* AboutWindow.xib */,
+				575D2E4C14D605580063D133 /* WFIEncodeWindow.xib */,
+				575D2E4D14D605580063D133 /* WFIMainMenu.xib */,
+				5781B59E1517E1DC00622982 /* WFIAboutWindow.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -426,6 +430,7 @@
 		578A7E2914CD7A950069B34F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WFI;
 				LastUpgradeCheck = 0420;
 			};
 			buildConfigurationList = 578A7E2C14CD7A950069B34F /* Build configuration list for PBXProject "WhazzerFinger" */;
@@ -435,6 +440,7 @@
 			knownRegions = (
 				en,
 				fr,
+				de,
 			);
 			mainGroup = 578A7E2714CD7A950069B34F;
 			productRefGroup = 578A7E3314CD7A950069B34F /* Products */;
@@ -459,16 +465,17 @@
 				57041B0214CECF8C00478CB6 /* SimFingerHoverPointer.png in Resources */,
 				575D2E2914D603B40063D133 /* DefaultActivePointer.png in Resources */,
 				575D2E2A14D603B40063D133 /* DefaultHoverPointer.png in Resources */,
-				575D2E4E14D605580063D133 /* EncodeWindow.xib in Resources */,
-				575D2E4F14D605580063D133 /* MainMenu.xib in Resources */,
+				575D2E4E14D605580063D133 /* WFIEncodeWindow.xib in Resources */,
+				575D2E4F14D605580063D133 /* WFIMainMenu.xib in Resources */,
 				575D2E5214D60EEE0063D133 /* StatusItemIcon.png in Resources */,
 				575D2E5414D610F20063D133 /* StatusItemAlternateIcon.png in Resources */,
 				573E12FC14D6B54100B491D0 /* iPhoneLandscapeBackground.png in Resources */,
 				573E12FF14D6B8E900B491D0 /* iPhone4LandscapeBlackHardware.png in Resources */,
 				5781B59C1517D5E000622982 /* Localizable.strings in Resources */,
-				5781B59F1517E1DC00622982 /* AboutWindow.xib in Resources */,
+				5781B59F1517E1DC00622982 /* WFIAboutWindow.xib in Resources */,
 				5781B5A11517E23C00622982 /* AboutLogo.png in Resources */,
 				574F5ADD152103F400C647F0 /* Icon.icns in Resources */,
+				570BA7EA16F6728600E74DBF /* WhazzerFinger-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,14 +511,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				578A7E4314CD7A950069B34F /* main.m in Sources */,
-				575D2E4414D605470063D133 /* AppDelegate.m in Sources */,
+				575D2E4414D605470063D133 /* WFIAppDelegate.m in Sources */,
 				575D2E4514D605470063D133 /* DDInvocationGrabber.m in Sources */,
 				575D2E4614D605470063D133 /* NSObject+DDExtensions.m in Sources */,
-				575D2E4714D605470063D133 /* EncodeWindowController.m in Sources */,
-				575D2E4814D605470063D133 /* DefaultPointer.m in Sources */,
-				575D2E4914D605470063D133 /* SimFingerPointer.m in Sources */,
-				575D2E4A14D605470063D133 /* ScreenRecorder.m in Sources */,
-				5781B5A41517E47C00622982 /* AboutWindowController.m in Sources */,
+				575D2E4714D605470063D133 /* WFIEncodeWindowController.m in Sources */,
+				575D2E4814D605470063D133 /* WFIDefaultPointer.m in Sources */,
+				575D2E4914D605470063D133 /* WFISimFingerPointer.m in Sources */,
+				575D2E4A14D605470063D133 /* WFIScreenRecorder.m in Sources */,
+				5781B5A41517E47C00622982 /* WFIAboutWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +546,7 @@
 			children = (
 				5781B59B1517D5E000622982 /* en */,
 				5781B59D1517D99500622982 /* fr */,
+				570BA7E916F6728600E74DBF /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -547,6 +555,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				578A7E4014CD7A950069B34F /* en */,
+				570BA7EB16F672BB00E74DBF /* de */,
+				570BA7EC16F672BB00E74DBF /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
