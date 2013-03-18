@@ -25,12 +25,12 @@
 		575D2E4814D605470063D133 /* WFIDefaultPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3D14D605470063D133 /* WFIDefaultPointer.m */; };
 		575D2E4914D605470063D133 /* WFISimFingerPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E3F14D605470063D133 /* WFISimFingerPointer.m */; };
 		575D2E4A14D605470063D133 /* WFIScreenRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 575D2E4314D605470063D133 /* WFIScreenRecorder.m */; };
-		575D2E4E14D605580063D133 /* WFIEncodeWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E4C14D605580063D133 /* WFIEncodeWindow.xib */; };
+		575D2E4E14D605580063D133 /* WFIEncodeWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E4C14D605580063D133 /* WFIEncodeWindowController.xib */; };
 		575D2E4F14D605580063D133 /* WFIMainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E4D14D605580063D133 /* WFIMainMenu.xib */; };
 		575D2E5214D60EEE0063D133 /* StatusItemIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E5114D60EEE0063D133 /* StatusItemIcon.png */; };
 		575D2E5414D610F20063D133 /* StatusItemAlternateIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 575D2E5314D610F20063D133 /* StatusItemAlternateIcon.png */; };
 		5781B59C1517D5E000622982 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5781B59A1517D5E000622982 /* Localizable.strings */; };
-		5781B59F1517E1DC00622982 /* WFIAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5781B59E1517E1DC00622982 /* WFIAboutWindow.xib */; };
+		5781B59F1517E1DC00622982 /* WFIAboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5781B59E1517E1DC00622982 /* WFIAboutWindowController.xib */; };
 		5781B5A11517E23C00622982 /* AboutLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5781B5A01517E23C00622982 /* AboutLogo.png */; };
 		5781B5A41517E47C00622982 /* WFIAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5781B5A31517E47C00622982 /* WFIAboutWindowController.m */; };
 		578A7E3714CD7A950069B34F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 578A7E3614CD7A950069B34F /* Cocoa.framework */; };
@@ -82,14 +82,14 @@
 		575D2E3F14D605470063D133 /* WFISimFingerPointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFISimFingerPointer.m; sourceTree = "<group>"; };
 		575D2E4214D605470063D133 /* WFIScreenRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFIScreenRecorder.h; sourceTree = "<group>"; };
 		575D2E4314D605470063D133 /* WFIScreenRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFIScreenRecorder.m; sourceTree = "<group>"; };
-		575D2E4C14D605580063D133 /* WFIEncodeWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFIEncodeWindow.xib; sourceTree = "<group>"; };
+		575D2E4C14D605580063D133 /* WFIEncodeWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFIEncodeWindowController.xib; sourceTree = "<group>"; };
 		575D2E4D14D605580063D133 /* WFIMainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFIMainMenu.xib; sourceTree = "<group>"; };
 		575D2E5014D606980063D133 /* WFIPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFIPointer.h; sourceTree = "<group>"; };
 		575D2E5114D60EEE0063D133 /* StatusItemIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusItemIcon.png; sourceTree = "<group>"; };
 		575D2E5314D610F20063D133 /* StatusItemAlternateIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StatusItemAlternateIcon.png; sourceTree = "<group>"; };
 		5781B59B1517D5E000622982 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5781B59D1517D99500622982 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		5781B59E1517E1DC00622982 /* WFIAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFIAboutWindow.xib; sourceTree = "<group>"; };
+		5781B59E1517E1DC00622982 /* WFIAboutWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WFIAboutWindowController.xib; sourceTree = "<group>"; };
 		5781B5A01517E23C00622982 /* AboutLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutLogo.png; sourceTree = "<group>"; };
 		5781B5A21517E47C00622982 /* WFIAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFIAboutWindowController.h; sourceTree = "<group>"; };
 		5781B5A31517E47C00622982 /* WFIAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFIAboutWindowController.m; sourceTree = "<group>"; };
@@ -285,9 +285,9 @@
 		575D2E4B14D605580063D133 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				575D2E4C14D605580063D133 /* WFIEncodeWindow.xib */,
+				575D2E4C14D605580063D133 /* WFIEncodeWindowController.xib */,
 				575D2E4D14D605580063D133 /* WFIMainMenu.xib */,
-				5781B59E1517E1DC00622982 /* WFIAboutWindow.xib */,
+				5781B59E1517E1DC00622982 /* WFIAboutWindowController.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -465,14 +465,14 @@
 				57041B0214CECF8C00478CB6 /* SimFingerHoverPointer.png in Resources */,
 				575D2E2914D603B40063D133 /* DefaultActivePointer.png in Resources */,
 				575D2E2A14D603B40063D133 /* DefaultHoverPointer.png in Resources */,
-				575D2E4E14D605580063D133 /* WFIEncodeWindow.xib in Resources */,
+				575D2E4E14D605580063D133 /* WFIEncodeWindowController.xib in Resources */,
 				575D2E4F14D605580063D133 /* WFIMainMenu.xib in Resources */,
 				575D2E5214D60EEE0063D133 /* StatusItemIcon.png in Resources */,
 				575D2E5414D610F20063D133 /* StatusItemAlternateIcon.png in Resources */,
 				573E12FC14D6B54100B491D0 /* iPhoneLandscapeBackground.png in Resources */,
 				573E12FF14D6B8E900B491D0 /* iPhone4LandscapeBlackHardware.png in Resources */,
 				5781B59C1517D5E000622982 /* Localizable.strings in Resources */,
-				5781B59F1517E1DC00622982 /* WFIAboutWindow.xib in Resources */,
+				5781B59F1517E1DC00622982 /* WFIAboutWindowController.xib in Resources */,
 				5781B5A11517E23C00622982 /* AboutLogo.png in Resources */,
 				574F5ADD152103F400C647F0 /* Icon.icns in Resources */,
 				570BA7EA16F6728600E74DBF /* WhazzerFinger-Info.plist in Resources */,

@@ -12,9 +12,7 @@
 			<key>change date</key>
 			<date>2001-01-01T00:00:00Z</date>
 			<key>changed values</key>
-			<array>
-				<string>de</string>
-			</array>
+			<array/>
 			<key>class</key>
 			<string>BLBundleObject</string>
 			<key>errors</key>
@@ -38,15 +36,13 @@
 					<key>change date</key>
 					<date>2012-03-19T22:00:27Z</date>
 					<key>changed values</key>
-					<array>
-						<string>de</string>
-					</array>
+					<array/>
 					<key>class</key>
 					<string>BLStringsFileObject</string>
 					<key>errors</key>
 					<array/>
 					<key>flags</key>
-					<integer>0</integer>
+					<integer>1</integer>
 					<key>hash</key>
 					<string>a8be6bb84f7c62ef9b272318e77a6c2f
 </string>
@@ -71,6 +67,8 @@
 							<string>About</string>
 							<key>localizations</key>
 							<dict>
+								<key>de</key>
+								<string>Über</string>
 								<key>en</key>
 								<string>About</string>
 							</dict>
@@ -94,6 +92,8 @@
 							<string>Couldn't find iOS Simulator.</string>
 							<key>localizations</key>
 							<dict>
+								<key>de</key>
+								<string>Der iOS-Simulator wurde nicht gefunden.</string>
 								<key>en</key>
 								<string>Couldn't find iOS Simulator.</string>
 							</dict>
@@ -117,6 +117,8 @@
 							<string>Couldn't find Simulator</string>
 							<key>localizations</key>
 							<dict>
+								<key>de</key>
+								<string>Simulator nicht gefunden</string>
 								<key>en</key>
 								<string>Couldn't find Simulator</string>
 							</dict>
@@ -140,6 +142,8 @@
 							<string>Encoding movie...</string>
 							<key>localizations</key>
 							<dict>
+								<key>de</key>
+								<string>Film wieder kodiert…</string>
 								<key>en</key>
 								<string>Encoding movie...</string>
 							</dict>
@@ -150,9 +154,7 @@
 							<key>change date</key>
 							<date>2001-01-01T00:00:00Z</date>
 							<key>changed values</key>
-							<array>
-								<string>de</string>
-							</array>
+							<array/>
 							<key>class</key>
 							<string>BLStringKeyObject</string>
 							<key>comment</key>
@@ -190,6 +192,8 @@
 							<string>Quit</string>
 							<key>localizations</key>
 							<dict>
+								<key>de</key>
+								<string>Beenden</string>
 								<key>en</key>
 								<string>Quit</string>
 							</dict>
@@ -213,6 +217,8 @@
 							<string>Record</string>
 							<key>localizations</key>
 							<dict>
+								<key>de</key>
+								<string>Aufnahme starten</string>
 								<key>en</key>
 								<string>Record</string>
 							</dict>
@@ -259,6 +265,8 @@
 							<string>Stop recording</string>
 							<key>localizations</key>
 							<dict>
+								<key>de</key>
+								<string>Aufnahme stoppen</string>
 								<key>en</key>
 								<string>Stop recording</string>
 							</dict>
@@ -282,6 +290,8 @@
 							<string>Universal Access Disabled</string>
 							<key>localizations</key>
 							<dict>
+								<key>de</key>
+								<string>Zugriff für Hilfsgeräte deaktiviert</string>
 								<key>en</key>
 								<string>Universal Access Disabled</string>
 							</dict>
@@ -305,6 +315,8 @@
 							<string>You must enable access for assistive devices in the System Preferences, under Universal Access.</string>
 							<key>localizations</key>
 							<dict>
+								<key>de</key>
+								<string>Sie müssen in den Systemeinstellungen unter Bedienungshilfen den Zugriff für Hilfsgeräte aktiviernen.</string>
 								<key>en</key>
 								<string>You must enable access for assistive devices in the System Preferences, under Universal Access.</string>
 							</dict>
@@ -433,7 +445,7 @@
 				</dict>
 			</array>
 			<key>flags</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>name</key>
 			<string>../WhazzerFingerTests</string>
 			<key>naming style</key>
