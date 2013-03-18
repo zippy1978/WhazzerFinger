@@ -9,8 +9,34 @@
 #import "WFIAppDelegate.h"
 #import "WFISimFingerPointer.h"
 #import "WFIDefaultPointer.h"
+#import "WFIPointer.h"
+#import "WFIDevice.h"
+#import "WFIDefaultScene.h"
+#import "WFIDeviceHardwareOverlay.h"
 
-@implementation WFIAppDelegate
+@implementation WFIAppDelegate {
+    
+    NSStatusItem * _statusItem;
+    
+    NSRect _screenRect;
+	
+	NSWindow *_pointerOverlayWindow;
+	NSWindow *_hardwareOverlayWindow;
+    NSWindow *_backgroundWindow;
+	NSWindow *_fadeOverlayWindow;
+    
+    WFIEncodeWindowController *_encodeWindowController;
+    WFIAboutWindowController *_aboutWindowController;
+    
+    id<WFIPointer> _pointer;
+    
+    WFIScreenRecorder *_screenRecorder;
+    
+    WFIDevice *_detectedDevice;
+    WFIDeviceHardwareOverlay *_selectedHardwareOverlay;
+    
+    id<WFIScene> _scene;
+}
 
 @synthesize statusMenu = _statusMenu;
 @synthesize screenShotMenuItem = _screenShotMenuItem;
@@ -36,6 +62,9 @@
 	[_pointerOverlayWindow setBackgroundColor:[NSColor colorWithPatternImage:[_pointer imageForState:kWFIPointerMouseStateMoved]]];
 	[_pointerOverlayWindow setLevel:NSFloatingWindowLevel];
 	[_pointerOverlayWindow setIgnoresMouseEvents:YES];
+    
+    // Initialize scene
+    _scene = [[WFIDefaultScene alloc] init];
     
 	[self updateWindowPosition];
     
@@ -135,15 +164,13 @@
 
 - (AXUIElementRef)simulatorApplication
 {
-	if(AXAPIEnabled())
-	{
+	if(AXAPIEnabled()) {
 		NSArray *applications = [[NSWorkspace sharedWorkspace] runningApplications];
 		
-		for(NSRunningApplication *application in applications)
-		{
+		for(NSRunningApplication *application in applications) {
+            
             // TODO : internationalize Simulator name here !
-			if([application.localizedName isEqualToString:NSLocalizedString(@"iOS Simulator", @"iOS Simulator application name")])
-			{
+			if([application.localizedName isEqualToString:NSLocalizedString(@"iOS Simulator", @"iOS Simulator application name")]) {
 				pid_t pid = application.processIdentifier;
 				
 				[[NSWorkspace sharedWorkspace] launchAppWithBundleIdentifier:application.bundleIdentifier
@@ -183,10 +210,8 @@
 	CFArrayRef value;
 	AXUIElementCopyAttributeValue(element, CFSTR("AXWindows"), (CFTypeRef *)&value);
 	
-	for(id object in (__bridge NSArray *)value)
-	{
-		if(CFGetTypeID((__bridge void *)object) == AXUIElementGetTypeID())
-		{
+	for(id object in (__bridge NSArray *)value) {
+		if(CFGetTypeID((__bridge void *)object) == AXUIElementGetTypeID()) {
 			AXUIElementRef subElement = (__bridge AXUIElementRef)object;
 			
 			AXUIElementPerformAction(subElement, kAXRaiseAction);
@@ -200,35 +225,21 @@
 			CGSize size;
 			AXValueGetValue(sizeValue, kAXValueCGSizeType, (void *)&size);
 			
-			BOOL supportedSize = NO;
-			BOOL iPadMode = NO;
-			BOOL landscape = NO;
-			
-            // iPhone portrait
-			if((int)size.width == kiPhoneWidth && (int)size.height == kiPhoneHeight) 
-            {
-                landscape = NO;
-				supportedSize = YES;
-                // iPhone landscape
-			} else if((int)size.width == kiPhoneHeight && (int)size.height == kiPhoneWidth) 
-            {
-				supportedSize = YES;
-				landscape = YES;
-                // iPad portrait
-			} else if ((int)size.width == kiPadWidth && (int)size.height == kiPadHeight) 
-            {
-				supportedSize = YES;
-				iPadMode = YES;
-                // iPad landscape
-			} else if ((int)size.width == kiPadHeight && (int)size.height == kiPadWidth) 
-            {
-                supportedSize = YES;
-				iPadMode = YES;
-				landscape = YES;
-			}
-			
-			if(supportedSize) 
-            {
+			WFIDeviceOrientation orientation = kWFIDeviceOrientationPortrait;
+            
+            // Device detection
+            
+            _detectedDevice = [WFIDevice deviceWithMatchingWidth:(NSInteger)size.width height:(NSInteger)size.height];
+            if (!_detectedDevice) {
+                _detectedDevice = [WFIDevice deviceWithMatchingWidth:(NSInteger)size.height height:(NSInteger)size.width];
+                orientation = kWFIDeviceOrientationLandscape;
+            }
+            
+            if (_detectedDevice) {
+                
+                // Select first available hardware overlay
+                _selectedHardwareOverlay = [_detectedDevice.hardwareOverlays objectAtIndex:0];
+                
                 // Initialize background and hardware overlay
                 
 				Boolean settable;
@@ -236,43 +247,9 @@
 				
 				CGPoint point;
                 
-                // iPad
-                if(iPadMode) 
-                {
-                    // Portrait
-                    if(!landscape) 
-                    {
-                        NSLog(@"No yet...");
-                    } 
-                    
-                    // Landscape
-                    else 
-                    {
-                        NSLog(@"No yet...");
-                    }
-                 
-                }
-                
-                // iPhone
-                else 
-                {
-                    // Portrait
-                    if (!landscape) 
-                    {
-                        
-                        [self backgroundImage:[NSImage imageNamed:kBackgroundiPhonePortraitImageDefault]];
-                        [self hardwareOverlayImage:[NSImage imageNamed:kHadwareOverlayiPhonePortraitImageDefault]];
-                    } 
-                    
-                    // Landscape
-                    else 
-                    {
-                        [self backgroundImage:[NSImage imageNamed:kBackgroundiPhoneLandscapeImageDefault]];
-                        [self hardwareOverlayImage:[NSImage imageNamed:kHadwareOverlayiPhoneLandscapeImageDefault]];
-                    }					
-                }
-                
-                
+                [self backgroundImage:[_scene backgroundImageForDevice:_detectedDevice orientation:orientation]];
+                [self hardwareOverlayImage:[_scene hardwareOverlayImageForHardwareOverlay:_selectedHardwareOverlay orientation:orientation]];
+    
                 // Center on screen
                 CGFloat screenWidth = [_hardwareOverlayWindow screen].frame.size.width;
                 CGFloat screenHeight = [_hardwareOverlayWindow screen].frame.size.height;
@@ -331,8 +308,7 @@
     // Cursor is never hidden if scene is not visible
     if ([_backgroundWindow isVisible]) {
 
-        if (NSPointInRect (mousePosition, _backgroundWindow.frame)) 
-        {
+        if (NSPointInRect (mousePosition, _backgroundWindow.frame)) {
             [_pointerOverlayWindow orderFront:nil];
                 
             // Hack to make background cursor setting work

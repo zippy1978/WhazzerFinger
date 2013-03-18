@@ -7,45 +7,18 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "WFIPointer.h"
-#import "WFIScreenRecorder.h"
 #import "WFIEncodeWindowController.h"
 #import "WFIAboutWindowController.h"
+#import "WFIScreenRecorder.h"
 
-#define kiPhoneWidth 368
-#define kiPhoneHeight 716
-#define kiPadWidth 852
-#define kiPadHeight 1108
 #define kBackgroundBorderWidth 11 // 10px + 1px
 #define kWindowShadowWidth 10
 
 
-#define kHadwareOverlayiPhonePortraitImageDefault @"iPhone4PortraitBlackHardware"
-#define kBackgroundiPhonePortraitImageDefault @"iPhonePortraitBackground"
-#define kHadwareOverlayiPhoneLandscapeImageDefault @"iPhone4LandscapeBlackHardware"
-#define kBackgroundiPhoneLandscapeImageDefault @"iPhoneLandscapeBackground"
-
 CGEventRef tapCallBack(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *info);
 void windowFrameDidChangeCallback( AXObserverRef observer, AXUIElementRef element, CFStringRef notificationName, void * contextData);
 
-@interface WFIAppDelegate : NSObject <NSApplicationDelegate, WFIScreenRecorderDelegate> {
-    
-    NSStatusItem * _statusItem;
-    
-    NSRect _screenRect;
-	
-	NSWindow *_pointerOverlayWindow;
-	NSWindow *_hardwareOverlayWindow;
-    NSWindow *_backgroundWindow;
-	NSWindow *_fadeOverlayWindow;
-    
-    WFIEncodeWindowController *_encodeWindowController;
-    WFIAboutWindowController *_aboutWindowController;
-    
-    id<WFIPointer> _pointer;
-    
-    WFIScreenRecorder *_screenRecorder;
-}
+@interface WFIAppDelegate : NSObject <NSApplicationDelegate, WFIScreenRecorderDelegate>
 
 @property (strong, nonatomic) IBOutlet NSMenu *statusMenu;
 @property (strong, nonatomic) IBOutlet NSMenuItem *screenShotMenuItem;
