@@ -137,7 +137,6 @@
 
 - (void)hardwareOverlayImage:(NSImage *)image
 {
-    // TODO: detect portrait or landscape mode
     
     _hardwareOverlayWindow = [[NSWindow alloc] initWithContentRect:NSMakeRect(0, -50, image.size.width, image.size.height) styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:NO];
     

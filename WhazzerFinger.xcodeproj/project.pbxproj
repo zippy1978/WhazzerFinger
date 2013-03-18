@@ -43,6 +43,7 @@
 		57AC3EF216F7AD3400865E89 /* WFIDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AC3EF116F7AD3400865E89 /* WFIDevice.m */; };
 		57AC3EF816F7B6E400865E89 /* WFIDefaultScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AC3EF716F7B6E400865E89 /* WFIDefaultScene.m */; };
 		57AC3F0116F7C56F00865E89 /* WFIDeviceHardwareOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AC3F0016F7C56F00865E89 /* WFIDeviceHardwareOverlay.m */; };
+		57D88B2216F7D358008A80C6 /* iPhone5BlackHardware.png in Resources */ = {isa = PBXBuildFile; fileRef = 57D88B2116F7D358008A80C6 /* iPhone5BlackHardware.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		57AC3EF716F7B6E400865E89 /* WFIDefaultScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFIDefaultScene.m; sourceTree = "<group>"; };
 		57AC3EFF16F7C56F00865E89 /* WFIDeviceHardwareOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFIDeviceHardwareOverlay.h; sourceTree = "<group>"; };
 		57AC3F0016F7C56F00865E89 /* WFIDeviceHardwareOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFIDeviceHardwareOverlay.m; sourceTree = "<group>"; };
+		57D88B2116F7D358008A80C6 /* iPhone5BlackHardware.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone5BlackHardware.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		57041AF114CECD6100478CB6 /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				57D88B2116F7D358008A80C6 /* iPhone5BlackHardware.png */,
 				57041AF214CECD6100478CB6 /* iPhone4BlackHardware.png */,
 			);
 			path = iPhone;
@@ -485,6 +488,7 @@
 				574F5ADD152103F400C647F0 /* Icon.icns in Resources */,
 				570BA7EA16F6728600E74DBF /* WhazzerFinger-Info.plist in Resources */,
 				57AC3EEE16F7AC1300865E89 /* Devices.plist in Resources */,
+				57D88B2216F7D358008A80C6 /* iPhone5BlackHardware.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

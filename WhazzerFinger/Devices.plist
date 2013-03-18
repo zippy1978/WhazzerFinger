@@ -2,6 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>iPhone 4-inch</key>
+	<dict>
+		<key>Width</key>
+		<integer>386</integer>
+		<key>Height</key>
+		<integer>806</integer>
+		<key>ScreenWidth</key>
+		<integer>324</integer>
+		<key>ScreenHeight</key>
+		<integer>572</integer>
+		<key>HardwareOverlays</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>iPhone 5 black</string>
+				<key>Image</key>
+				<string>iPhone5BlackHardware.png</string>
+			</dict>
+		</array>
+	</dict>
 	<key>iPhone 3.5-inch</key>
 	<dict>
 		<key>Width</key>
